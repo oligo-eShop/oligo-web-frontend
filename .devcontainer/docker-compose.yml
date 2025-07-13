@@ -1,0 +1,12 @@
+services:
+  devcontainer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspace:cached
+    ports:
+      - "3000:3000"
+    environment:
+      - LANG=en_US.UTF-8
+    command: sleep infinity
